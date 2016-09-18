@@ -1,18 +1,27 @@
-<!DOCTYPE html>
-<html>
-<body>
-<p><center> MINDTREE KALINGA MAP</center></p>
 
-<img src="blueprint.jpg" alt="map" usemap="#mtmap">
+<html>  
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+<script type="text/javascript">
+function zoomin()
+{
+var i=document.getElementById("image");
+i.style.width=(i.clientWidth+50)+"px";
+}
+function zoomout()
+{
+var i=document.getElementById("image");
+i.style.width=(i.clientWidth-50)+"px";
+}
 
-<map name="mtmap">
-  <area shape="rect" coords="792,137,965,343" alt="Learning_center" href="glc.jpg">
-  <area shape="rect"  coords="324,354,655,469" alt="social_center" href="social center.jpg">
-<area shape="circle" coords="736,375,6" alt="sundial" href="sundial.jpg">
-  <area shape="rect"  coords="690,399,782,462" alt="Aphitheater" href="amphi.jpg">
-<area shape="rect" coords="352,567,520,733" alt="eternalPond" href="pond.jpg">
+</script>
+</head>  
+    <body>
+        <div id="sampleDiv" style="width: 100px; background-color: Gray;">
+            <img src="blueprint.jpg" id="image" data-element="pinchzoomer">
+        </div>
+    <button type="button" onclick="zoomin()"> Zoom In</button>
+        <button type="button" onclick="zoomout()"> Zoom Out</button>
+    </body>
+</html> 
 
-</map>
-
-</body>
-</html>
